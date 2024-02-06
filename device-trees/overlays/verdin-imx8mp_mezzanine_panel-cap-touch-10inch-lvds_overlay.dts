@@ -1,0 +1,123 @@
+/dts-v1/;
+
+/ {
+	compatible = "toradex,verdin-imx8mp";
+
+	fragment@0 {
+		target = <0xffffffff>;
+
+		__overlay__ {
+			status = "okay";
+		};
+	};
+
+	fragment@1 {
+		target = <0xffffffff>;
+
+		__overlay__ {
+			status = "okay";
+		};
+	};
+
+	fragment@2 {
+		target = <0xffffffff>;
+
+		__overlay__ {
+			status = "okay";
+		};
+	};
+
+	fragment@3 {
+		target = <0xffffffff>;
+
+		__overlay__ {
+			status = "okay";
+		};
+	};
+
+	fragment@4 {
+		target = <0xffffffff>;
+
+		__overlay__ {
+			status = "okay";
+		};
+	};
+
+	fragment@5 {
+		target = <0xffffffff>;
+
+		__overlay__ {
+			status = "okay";
+		};
+	};
+
+	fragment@6 {
+		target = <0xffffffff>;
+
+		__overlay__ {
+			status = "okay";
+		};
+	};
+
+	fragment@7 {
+		target = <0xffffffff>;
+
+		__overlay__ {
+			status = "okay";
+		};
+	};
+
+	fragment@8 {
+		target = <0xffffffff>;
+
+		__overlay__ {
+			status = "okay";
+		};
+	};
+
+	fragment@9 {
+		target = <0xffffffff>;
+
+		__overlay__ {
+			height-mm = <0x88>;
+			width-mm = <0xd9>;
+			status = "okay";
+
+			panel-timing {
+				clock-frequency = <0x41b54a0 0x43ce660 0x45ffec0>;
+				de-active = <0x01>;
+				hactive = <0x500 0x500 0x500>;
+				hback-porch = <0x17 0x3c 0x47>;
+				hfront-porch = <0x17 0x3c 0x47>;
+				hsync-len = <0x0f 0x28 0x2f>;
+				pixelclk-active = <0x01>;
+				vactive = <0x320 0x320 0x320>;
+				vback-porch = <0x05 0x07 0x0a>;
+				vfront-porch = <0x05 0x07 0x0a>;
+				vsync-len = <0x06 0x09 0x0c>;
+			};
+		};
+	};
+
+	fragment@10 {
+		target = <0xffffffff>;
+
+		__overlay__ {
+			status = "okay";
+		};
+	};
+
+	__fixups__ {
+		atmel_mxt_ts_mezzanine = "/fragment@0:target:0";
+		backlight_mezzanine = "/fragment@1:target:0";
+		gpu_2d = "/fragment@2:target:0";
+		gpu_3d = "/fragment@3:target:0";
+		lcdif2 = "/fragment@4:target:0";
+		ldb = "/fragment@5:target:0";
+		ldb_phy = "/fragment@6:target:0";
+		mix_gpu_ml = "/fragment@7:target:0";
+		ml_vipsi = "/fragment@8:target:0";
+		panel_lvds_mez = "/fragment@9:target:0";
+		pwm2 = "/fragment@10:target:0";
+	};
+};

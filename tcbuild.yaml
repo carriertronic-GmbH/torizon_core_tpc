@@ -1,0 +1,25 @@
+# Documentation https://developer.toradex.com/torizon/os-customization/torizoncore-builder-workflow/#customizing-the-configuration-file
+input:
+  easy-installer:
+    toradex-feed:
+      version: "6.5.0"
+      release: quarterly
+      machine: verdin-imx8mp
+      distro: torizon
+      variant: torizon-core-docker
+      build-number: 8
+
+customization:
+  splash-screen: splashScreen.png
+  device-tree:
+    overlays:
+      clear: true
+      add:
+        - device-trees/overlays/verdin-imx8mp_mezzanine_panel-cap-touch-10inch-lvds_overlay.dts
+
+output:
+  easy-installer:
+    local: TorizonCoreTpc-TCB-CUSTOM
+  ostree:
+    branch: tpc
+    commit-subject: TorizonCoreTpc
